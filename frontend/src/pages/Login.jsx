@@ -16,7 +16,7 @@ export default function Login() {
     setError('')
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_API_URL}/auth/login`,
+        `https://india-villages-api.vercel.app/auth/login`,
         form
       )
       login(res.data.data.user, res.data.data.token)

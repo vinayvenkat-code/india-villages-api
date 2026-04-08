@@ -17,7 +17,7 @@ export default function Register() {
     setError('')
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_API_URL}/auth/register`,
+        `https://india-villages-api.vercel.app/auth/register`,
         form
       )
       setSuccess(res.data.data)
