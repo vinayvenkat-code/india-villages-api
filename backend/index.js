@@ -529,7 +529,7 @@ app.get('/health', async (req, res) => {
 app.use((req, res) => {
   errorResponse(res, 404, 'NOT_FOUND', `Route ${req.method} ${req.path} not found`);
 });
-
+module.exports = app;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
