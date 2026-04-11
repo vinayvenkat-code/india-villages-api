@@ -7,23 +7,25 @@
       "maxDuration": 30
     }
   },
+  "rewrites": [
+    {
+      "source": "/health",
+      "destination": "backend/index.js"
+    },
+    {
+      "source": "/v1/:path*",
+      "destination": "backend/index.js"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "backend/index.js"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "backend/index.js"
+    }
+  ],
   "routes": [
-    {
-      "src": "/health",
-      "dest": "backend/index.js"
-    },
-    {
-      "src": "/v1/(.*)",
-      "dest": "backend/index.js"
-    },
-    {
-      "src": "/auth/(.*)",
-      "dest": "backend/index.js"
-    },
-    {
-      "src": "/admin/(.*)",
-      "dest": "backend/index.js"
-    },
     {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
