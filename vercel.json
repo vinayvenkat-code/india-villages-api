@@ -25,6 +25,14 @@
       "dest": "backend/index.js"
     },
     {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/favicon.svg",
+      "dest": "/favicon.svg"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
